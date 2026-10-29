@@ -1,0 +1,267 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#f5f5f7">
+<meta name="description" content="PATLAS-THERMA — A conceptual research initiative exploring controlled thermal energy and oncology-related technology.">
+<title>PATLAS-THERMA — P.A.T.L.A.S. Research</title>
+<style>
+:root {
+  --bg: #f5f5f7;
+  --surface: #ffffff;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --blue: #06c;
+  --line: #d2d2d7;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(245,245,247,.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+}
+.nav-inner {
+  max-width: 1000px;
+  margin: auto;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand { font-size: 15px; font-weight: 650; letter-spacing: -.3px; }
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 22px;
+  padding: 7px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+main { max-width: 900px; margin: auto; padding: 0 24px; }
+.hero { text-align: center; padding: 100px 0 72px; }
+.eyebrow {
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+  font-weight: 650;
+}
+h1 {
+  font-size: clamp(42px, 8vw, 76px);
+  letter-spacing: -4px;
+  line-height: 1.04;
+  margin: 18px 0;
+}
+.subtitle {
+  color: var(--muted);
+  font-size: clamp(18px, 3vw, 23px);
+  max-width: 620px;
+  margin: 0 auto 28px;
+}
+.pill {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  padding: 7px 13px;
+  font-size: 12px;
+  color: var(--muted);
+  background: rgba(255,255,255,.65);
+}
+section { margin: 24px 0; }
+.panel {
+  background: var(--surface);
+  border-radius: 24px;
+  padding: clamp(24px, 5vw, 44px);
+  margin-bottom: 20px;
+}
+h2 { font-size: 28px; letter-spacing: -1px; margin: 0 0 12px; }
+p { margin: 0 0 14px; }
+.muted { color: var(--muted); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.small-card {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 24px;
+}
+.small-card h3 { margin: 0 0 8px; font-size: 17px; }
+.notice {
+  border-left: 3px solid var(--blue);
+  padding: 4px 0 4px 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+footer {
+  max-width: 900px;
+  margin: 50px auto 0;
+  padding: 24px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+}
+@media (max-width: 600px) {
+  .hero { padding: 70px 0 48px; }
+  h1 { letter-spacing: -2px; }
+  .grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <a class="brand" href="../index.html" style="color:var(--text)">
+      P.A.T.L.A.S. Research
+    </a>
+    <div>
+      <a href="../index.html" data-en="Home" data-tr="Ana Sayfa">Home</a>
+      &nbsp;&nbsp;
+      <button id="lang" type="button" onclick="toggleLanguage()">TR</button>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <header class="hero">
+    <div class="eyebrow">P.A.T.L.A.S. Research · Project 01</div>
+    <h1>PATLAS-THERMA</h1>
+    <p class="subtitle"
+       data-en="Exploring the role of controlled thermal energy in future oncology-related research."
+       data-tr="Kontrollü termal enerjinin gelecekteki onkoloji araştırmalarındaki rolünü keşfetmek.">
+      Exploring the role of controlled thermal energy in future oncology-related research.
+    </p>
+    <span class="pill"
+      data-en="Concept-stage research"
+      data-tr="Konsept aşamasında araştırma">Concept-stage research</span>
+  </header>
+
+  <section class="panel">
+    <h2 data-en="Overview" data-tr="Genel Bakış">Overview</h2>
+    <p data-en="PATLAS-THERMA is a conceptual research initiative examining scientific principles related to controlled thermal energy and their potential relevance to oncology research."
+       data-tr="PATLAS-THERMA, kontrollü termal enerjiyle ilgili bilimsel ilkeleri ve bunların onkoloji araştırmalarıyla olası ilişkisini inceleyen kavramsal bir araştırma girişimidir.">
+      PATLAS-THERMA is a conceptual research initiative examining scientific principles related to controlled thermal energy and their potential relevance to oncology research.
+    </p>
+    <p class="muted"
+       data-en="The project is currently focused on research questions, scientific literature, and conceptual exploration—not on a validated medical device."
+       data-tr="Proje şu anda araştırma sorularına, bilimsel literatüre ve kavramsal incelemeye odaklanmaktadır; doğrulanmış bir tıbbi cihaz değildir.">
+      The project is currently focused on research questions, scientific literature, and conceptual exploration—not on a validated medical device.
+    </p>
+  </section>
+
+  <section>
+    <div class="grid">
+      <div class="small-card">
+        <h3 data-en="01 — Research focus" data-tr="01 — Araştırma odağı">01 — Research focus</h3>
+        <p class="muted"
+           data-en="Understanding thermal energy, biological systems, and relevant scientific literature."
+           data-tr="Termal enerjiyi, biyolojik sistemleri ve ilgili bilimsel literatürü anlamak.">
+          Understanding thermal energy, biological systems, and relevant scientific literature.
+        </p>
+      </div>
+      <div class="small-card">
+        <h3 data-en="02 — Key questions" data-tr="02 — Temel sorular">02 — Key questions</h3>
+        <p class="muted"
+           data-en="What is already known? What limitations and safety considerations must be studied?"
+           data-tr="Neler biliniyor? Hangi sınırlamalar ve güvenlik konuları araştırılmalı?">
+          What is already known? What limitations and safety considerations must be studied?
+        </p>
+      </div>
+      <div class="small-card">
+        <h3 data-en="03 — Method" data-tr="03 — Yöntem">03 — Method</h3>
+        <p class="muted"
+           data-en="Literature review, concept documentation, and responsible scientific evaluation."
+           data-tr="Literatür taraması, konsept belgeleme ve sorumlu bilimsel değerlendirme.">
+          Literature review, concept documentation, and responsible scientific evaluation.
+        </p>
+      </div>
+      <div class="small-card">
+        <h3 data-en="04 — Current status" data-tr="04 — Mevcut durum">04 — Current status</h3>
+        <p class="muted"
+           data-en="Early conceptual stage. No clinical validation or treatment claims."
+           data-tr="Erken konsept aşaması. Klinik doğrulama veya tedavi iddiası bulunmamaktadır.">
+          Early conceptual stage. No clinical validation or treatment claims.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 data-en="Scientific responsibility" data-tr="Bilimsel sorumluluk">
+      Scientific responsibility
+    </h2>
+    <p class="notice"
+       data-en="PATLAS-THERMA is an exploratory concept. It is not an approved or clinically validated medical device, and it must not be used to diagnose, prevent, or treat any disease."
+       data-tr="PATLAS-THERMA keşif amaçlı bir konsepttir. Onaylanmış veya klinik olarak doğrulanmış bir tıbbi cihaz değildir; herhangi bir hastalığı teşhis etmek, önlemek veya tedavi etmek amacıyla kullanılmamalıdır.">
+      PATLAS-THERMA is an exploratory concept. It is not an approved or clinically validated medical device, and it must not be used to diagnose, prevent, or treat any disease.
+    </p>
+  </section>
+
+  <section class="panel">
+    <h2 data-en="Part of a larger vision" data-tr="Daha geniş bir vizyonun parçası">
+      Part of a larger vision
+    </h2>
+    <p class="muted"
+       data-en="P.A.T.L.A.S. Research explores ideas at the intersection of biomedical engineering, medical imaging, and emerging healthcare technology."
+       data-tr="P.A.T.L.A.S. Research; biyomedikal mühendisliği, tıbbi görüntüleme ve gelişmekte olan sağlık teknolojilerinin kesişimindeki fikirleri araştırır.">
+      P.A.T.L.A.S. Research explores ideas at the intersection of biomedical engineering, medical imaging, and emerging healthcare technology.
+    </p>
+    <a href="../index.html"
+       data-en="Explore P.A.T.L.A.S. Research →"
+       data-tr="P.A.T.L.A.S. Research'i keşfet →">
+      Explore P.A.T.L.A.S. Research →
+    </a>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-row">
+    <span>© 2026 P.A.T.L.A.S. Research</span>
+    <span>Biomedical Research &amp; Medical Technology</span>
+  </div>
+  <p style="margin-top:14px"
+     data-en="Conceptual research only. Not medical advice."
+     data-tr="Yalnızca konsept araştırmasıdır. Tıbbi tavsiye değildir.">
+    Conceptual research only. Not medical advice.
+  </p>
+</footer>
+
+<script>
+let language = "en";
+function toggleLanguage() {
+  language = language === "en" ? "tr" : "en";
+  document.documentElement.lang = language;
+  document.querySelectorAll("[data-en][data-tr]").forEach(element => {
+    element.textContent = element.getAttribute("data-" + language);
+  });
+  document.getElementById("lang").textContent =
+    language === "en" ? "TR" : "EN";
+}
+</script>
+</body>
+</html>
