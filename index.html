@@ -1,583 +1,583 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07111f">
-  <meta name="description" content="P.A.T.L.A.S. Research — Exploring biomedical technology, medical imaging and innovative research concepts.">
-  <title>P.A.T.L.A.S. Research | Biomedical Innovation</title>
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="P.A.T.L.A.S. Research — Biomedical Research & Medical Technology.">
+  <title>P.A.T.L.A.S. Research</title>
 
   <style>
     :root {
-      --bg: #07111f;
-      --panel: #0d1b2d;
-      --blue: #57b9ff;
-      --cyan: #7de5ee;
-      --text: #f2f7ff;
-      --muted: #a2b2c7;
-      --line: rgba(151, 190, 225, .16);
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --blue: #0071e3;
+      --line: #e5e5ea;
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: Inter, -apple-system, BlinkMacSystemFont,
-        "Segoe UI", sans-serif;
-      line-height: 1.7;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
     }
 
-    a { color: inherit; text-decoration: none; }
-    button { font: inherit; }
-
-    .container {
-      width: min(1120px, 90%);
-      margin-inline: auto;
+    a {
+      color: var(--blue);
+      text-decoration: none;
     }
+
+    a:hover { text-decoration: underline; }
 
     header {
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(7, 17, 31, .91);
-      backdrop-filter: blur(16px);
+      background: rgba(255,255,255,.86);
+      backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--line);
     }
 
     nav {
-      min-height: 76px;
+      max-width: 1080px;
+      margin: auto;
+      padding: 14px 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 20px;
+      gap: 18px;
     }
 
     .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 800;
-      letter-spacing: 1px;
-    }
-
-    .logo {
-      display: grid;
-      place-items: center;
-      width: 43px;
-      height: 43px;
-      border-radius: 13px;
-      color: #06111f;
-      background: linear-gradient(135deg, var(--blue), var(--cyan));
-      font-size: 23px;
-      font-weight: 900;
-    }
-
-    .brand small {
-      display: block;
-      color: var(--muted);
-      font-size: 10px;
-      letter-spacing: 2px;
+      color: var(--text);
+      font-size: 16px;
+      font-weight: 750;
+      white-space: nowrap;
+      letter-spacing: -.03em;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 23px;
+      gap: 22px;
       font-size: 13px;
-      color: var(--muted);
     }
 
-    .nav-links a:hover { color: var(--cyan); }
+    .nav-links a { color: var(--text); }
 
-    .lang {
+    .lang-button {
+      background: white;
       border: 1px solid var(--line);
-      border-radius: 9px;
-      padding: 7px 11px;
-      background: var(--panel);
-      color: var(--text);
+      border-radius: 20px;
+      padding: 7px 12px;
       cursor: pointer;
+      font: inherit;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    main {
+      max-width: 1080px;
+      margin: auto;
+      padding: 30px 24px 80px;
     }
 
     .hero {
-      min-height: 610px;
-      display: grid;
-      align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: 100px 0;
-      background:
-        radial-gradient(ellipse at 85% 25%, #153e61 0%, transparent 36%),
-        radial-gradient(ellipse at 10% 90%, #102b43 0%, transparent 38%);
+      text-align: center;
+      padding: 92px 12px 76px;
     }
-
-    .hero-content { max-width: 790px; }
 
     .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--cyan);
+      color: var(--blue);
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 2px;
+      font-weight: 750;
       text-transform: uppercase;
-    }
-
-    .dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--cyan);
-      box-shadow: 0 0 14px var(--cyan);
+      letter-spacing: .12em;
     }
 
     h1 {
-      margin: 25px 0 18px;
-      font-size: clamp(45px, 8vw, 84px);
-      line-height: 1.05;
-      letter-spacing: -3px;
-    }
-
-    .gradient {
-      background: linear-gradient(90deg, var(--blue), var(--cyan));
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
+      margin: 15px 0;
+      font-size: clamp(43px, 8vw, 82px);
+      letter-spacing: -.065em;
+      line-height: 1.02;
     }
 
     .hero p {
-      max-width: 630px;
+      max-width: 680px;
+      margin: 0 auto;
       color: var(--muted);
-      font-size: 17px;
+      font-size: clamp(17px, 3vw, 22px);
     }
 
-    .actions {
+    .hero-actions {
+      margin-top: 27px;
       display: flex;
       flex-wrap: wrap;
-      gap: 13px;
-      margin-top: 32px;
-    }
-
-    .btn {
-      display: inline-flex;
       justify-content: center;
-      align-items: center;
-      border: 1px solid var(--line);
-      border-radius: 10px;
-      padding: 12px 19px;
+      gap: 12px;
+    }
+
+    .primary-link, .secondary-link {
+      display: inline-block;
+      padding: 11px 19px;
+      border-radius: 24px;
       font-size: 14px;
-      font-weight: 700;
-      transition: .2s;
+      font-weight: 600;
     }
 
-    .btn-primary {
-      color: #06111f;
-      background: linear-gradient(110deg, var(--blue), var(--cyan));
-      border: 0;
+    .primary-link {
+      background: var(--blue);
+      color: white;
     }
 
-    .btn:hover { transform: translateY(-2px); }
-
-    .section { padding: 90px 0; }
-
-    .section-alt {
-      background: #091624;
-      border-block: 1px solid var(--line);
+    .primary-link:hover {
+      background: #0062c4;
+      text-decoration: none;
     }
 
-    .section-head { max-width: 700px; margin-bottom: 36px; }
+    .secondary-link {
+      border: 1px solid var(--line);
+      background: white;
+      color: var(--text);
+    }
 
-    .section-head h2 {
-      font-size: clamp(30px, 5vw, 46px);
+    section { margin-top: 42px; }
+
+    .section-heading {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0 0 7px;
+      font-size: clamp(28px, 4vw, 38px);
+      letter-spacing: -.045em;
       line-height: 1.2;
-      letter-spacing: -1px;
-      margin: 12px 0;
     }
 
-    .section-head p { color: var(--muted); }
+    .section-description {
+      color: var(--muted);
+      margin: 0;
+    }
 
-    .grid {
+    .intro-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      padding: 30px;
+    }
+
+    .intro-card p {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .project-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
+      gap: 17px;
     }
 
-    .card {
-      background: linear-gradient(145deg, #102238, #0a1727);
-      border: 1px solid var(--line);
-      border-radius: 17px;
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-height: 295px;
       padding: 25px;
-      transition: border-color .2s, transform .2s;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      color: var(--text);
+      transition: transform .2s ease, box-shadow .2s ease;
     }
 
-    .card:hover {
-      border-color: rgba(87, 185, 255, .6);
+    .project-card:hover {
       transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(0,0,0,.055);
+      text-decoration: none;
     }
 
-    .card-icon {
-      display: grid;
-      place-items: center;
-      width: 46px;
-      height: 46px;
-      border: 1px solid rgba(87, 185, 255, .3);
-      border-radius: 13px;
-      color: var(--cyan);
-      background: rgba(87, 185, 255, .08);
-      font-size: 23px;
-    }
-
-    .card h3 { margin: 20px 0 8px; font-size: 20px; }
-    .card p { color: var(--muted); font-size: 14px; }
-    .tag { color: var(--cyan); font-size: 11px; letter-spacing: 1px; }
-
-    .notice {
-      margin-top: 28px;
-      padding: 18px 20px;
-      border: 1px solid rgba(125, 229, 238, .23);
-      border-radius: 12px;
-      color: var(--muted);
-      background: rgba(125, 229, 238, .04);
+    .project-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: #eaf3ff;
+      color: var(--blue);
+      font-weight: 750;
       font-size: 13px;
+      margin-bottom: 25px;
     }
 
-    .notice strong { color: var(--cyan); }
+    .project-card h3 {
+      margin: 0 0 9px;
+      font-size: 22px;
+      letter-spacing: -.035em;
+    }
 
-    .about-grid {
+    .project-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0 0 22px;
+    }
+
+    .project-link {
+      margin-top: auto;
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .status {
+      display: inline-block;
+      margin-top: 12px;
+      border-radius: 20px;
+      padding: 5px 10px;
+      background: #f0f0f3;
+      color: #55555a;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .values-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 45px;
-      align-items: start;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    .about-grid p { color: var(--muted); }
+    .value-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+    }
+
+    .value-card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+    }
+
+    .value-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .disclaimer {
+      background: white;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 18px 18px 0;
+      padding: 21px 23px;
+      color: var(--muted);
+      font-size: 14px;
+    }
 
     .contact-card {
-      max-width: 720px;
-      padding: 32px;
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      background: linear-gradient(145deg, #102238, #0a1727);
+      padding: 30px;
+      background: #eaf3ff;
+      border: 1px solid #dce9fb;
+      border-radius: 26px;
     }
 
-    .email {
-      display: inline-block;
-      margin: 12px 0 20px;
-      color: var(--cyan);
-      font-size: clamp(16px, 3vw, 22px);
-      overflow-wrap: anywhere;
+    .contact-card p {
+      color: #515d6d;
     }
+
+    .contact-card a { font-weight: 650; }
 
     footer {
-      padding: 30px 0;
       border-top: 1px solid var(--line);
+      padding: 28px 24px;
+      text-align: center;
       color: var(--muted);
       font-size: 12px;
     }
 
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
+    footer p { margin: 4px 0; }
 
-    @media (max-width: 800px) {
+    @media (max-width: 760px) {
+      .project-grid { grid-template-columns: 1fr; }
+      .project-card { min-height: 0; }
+      .values-grid { grid-template-columns: 1fr; }
+      .hero { padding: 66px 5px 52px; }
       .nav-links { gap: 12px; }
-      .grid { grid-template-columns: 1fr; }
-      .about-grid { grid-template-columns: 1fr; gap: 15px; }
-      .hero { min-height: 540px; }
     }
 
-    @media (max-width: 540px) {
-      nav { flex-wrap: wrap; padding: 12px 0; }
-      .nav-links { width: 100%; justify-content: space-between; gap: 8px; }
-      .nav-links a { font-size: 11px; }
-      h1 { letter-spacing: -2px; }
-      .section { padding: 65px 0; }
-      .contact-card { padding: 22px; }
+    @media (max-width: 480px) {
+      nav { padding: 12px 15px; }
+      main { padding: 18px 15px 55px; }
+      .brand { font-size: 14px; }
+      .nav-links { gap: 10px; font-size: 12px; }
+      .nav-links .optional-link { display: none; }
+      .intro-card, .contact-card { padding: 23px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        transition: none !important;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <nav class="container">
-      <a class="brand" href="#home" aria-label="P.A.T.L.A.S. Home">
-        <span class="logo">P</span>
-        <span>P.A.T.L.A.S.<small>RESEARCH</small></span>
-      </a>
+    <nav>
+      <a class="brand" href="#home">P.A.T.L.A.S. Research</a>
 
       <div class="nav-links">
-        <a href="#home" data-en="Home" data-tr="Ana Sayfa">Home</a>
-        <a href="#about" data-en="About" data-tr="Hakkımızda">About</a>
-        <a href="#projects" data-en="Projects" data-tr="Projeler">Projects</a>
-        <a href="#research" data-en="Research" data-tr="Araştırma">Research</a>
-        <a href="#contact" data-en="Contact" data-tr="İletişim">Contact</a>
-        <button class="lang" id="langBtn" type="button" aria-label="Change language">TR</button>
+        <a href="#about" data-en="About" data-tr="Hakkımızda">Hakkımızda</a>
+        <a href="#projects" data-en="Projects" data-tr="Projeler">Projeler</a>
+        <a href="#contact" data-en="Contact" data-tr="İletişim">İletişim</a>
+        <button class="lang-button" id="langBtn" type="button">English</button>
       </div>
     </nav>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="container hero-content">
-        <span class="eyebrow">
-          <span class="dot"></span>
-          <span data-en="Biomedical Research & Technology"
-                data-tr="Biyomedikal Araştırma ve Teknoloji">
-            Biomedical Research & Technology
-          </span>
-        </span>
+      <div class="eyebrow"
+        data-en="Biomedical Research & Medical Technology"
+        data-tr="Biyomedikal Araştırma ve Tıbbi Teknoloji">
+        Biyomedikal Araştırma ve Tıbbi Teknoloji
+      </div>
 
-        <h1>P.A.T.L.A.S.<br><span class="gradient"
-          data-en="Engineering Tomorrow's Healthcare."
-          data-tr="Sağlığın Geleceğini Tasarlamak.">
-          Engineering Tomorrow's Healthcare.
-        </span></h1>
+      <h1>P.A.T.L.A.S.<br>Research</h1>
 
-        <p data-en="Exploring ideas at the intersection of biomedical engineering, medical imaging and innovative healthcare technology."
-           data-tr="Biyomedikal mühendisliği, tıbbi görüntüleme ve yenilikçi sağlık teknolojilerinin kesişimindeki fikirleri keşfediyoruz.">
-          Exploring ideas at the intersection of biomedical engineering,
-          medical imaging and innovative healthcare technology.
+      <p
+        data-en="Exploring ideas at the intersection of engineering, biomedical science and future healthcare."
+        data-tr="Mühendislik, biyomedikal bilimler ve geleceğin sağlık teknolojilerinin kesişimindeki fikirleri araştırıyoruz.">
+        Mühendislik, biyomedikal bilimler ve geleceğin sağlık teknolojilerinin kesişimindeki fikirleri araştırıyoruz.
+      </p>
+
+      <div class="hero-actions">
+        <a class="primary-link" href="#projects"
+          data-en="Explore Projects"
+          data-tr="Projeleri Keşfet">
+          Projeleri Keşfet
+        </a>
+
+        <a class="secondary-link" href="#about"
+          data-en="Learn More"
+          data-tr="Daha Fazla Bilgi">
+          Daha Fazla Bilgi
+        </a>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-heading">
+        <h2 data-en="Ideas. Research. Possibility."
+            data-tr="Fikirler. Araştırma. Olasılıklar.">
+          Fikirler. Araştırma. Olasılıklar.
+        </h2>
+
+        <p class="section-description"
+          data-en="A research initiative focused on exploring medical technology concepts."
+          data-tr="Tıbbi teknoloji konseptlerini araştırmaya odaklanan bir araştırma girişimi.">
+          Tıbbi teknoloji konseptlerini araştırmaya odaklanan bir araştırma girişimi.
+        </p>
+      </div>
+
+      <div class="intro-card">
+        <p
+          data-en="P.A.T.L.A.S. Research is an independent concept-development initiative exploring possible applications of engineering and computational technologies in healthcare. Its projects are presented for educational and exploratory research purposes."
+          data-tr="P.A.T.L.A.S. Research, mühendislik ve bilgisayar teknolojilerinin sağlık alanındaki olası uygulamalarını araştıran bağımsız bir konsept geliştirme girişimidir. Projeler eğitim ve keşif amaçlı araştırma kapsamında sunulmaktadır.">
+          P.A.T.L.A.S. Research, mühendislik ve bilgisayar teknolojilerinin sağlık alanındaki olası uygulamalarını araştıran bağımsız bir konsept geliştirme girişimidir. Projeler eğitim ve keşif amaçlı araştırma kapsamında sunulmaktadır.
+        </p>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-heading">
+        <h2 data-en="Selected Projects" data-tr="Projelerimiz">
+          Projelerimiz
+        </h2>
+
+        <p class="section-description"
+          data-en="Explore each concept and its current research direction."
+          data-tr="Her konsepti ve mevcut araştırma yaklaşımını inceleyin.">
+          Her konsepti ve mevcut araştırma yaklaşımını inceleyin.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <a class="project-card"
+          href="projects/patlas-therma.html">
+          <span class="project-number">01</span>
+
+          <h3>PATLAS-THERMA</h3>
+
+          <p
+            data-en="An exploratory concept examining controlled thermal energy in an oncology research context."
+            data-tr="Onkoloji araştırmaları bağlamında kontrollü termal enerjiyi inceleyen bir araştırma konsepti.">
+            Onkoloji araştırmaları bağlamında kontrollü termal enerjiyi inceleyen bir araştırma konsepti.
+          </p>
+
+          <span class="status"
+            data-en="Concept stage"
+            data-tr="Konsept aşaması">Konsept aşaması</span>
+
+          <span class="project-link"
+            data-en="Explore project →"
+            data-tr="Projeyi incele →">Projeyi incele →</span>
+        </a>
+
+        <a class="project-card"
+          href="projects/ptls-crd.html">
+          <span class="project-number">02</span>
+
+          <h3>PTLS-CRD</h3>
+
+          <p
+            data-en="A conceptual exploration of computational visualization and Doppler-related imaging principles."
+            data-tr="Bilgisayar destekli görselleştirme ve Doppler ile ilişkili görüntüleme ilkelerini araştıran bir konsept.">
+            Bilgisayar destekli görselleştirme ve Doppler ile ilişkili görüntüleme ilkelerini araştıran bir konsept.
+          </p>
+
+          <span class="status"
+            data-en="Concept stage"
+            data-tr="Konsept aşaması">Konsept aşaması</span>
+
+          <span class="project-link"
+            data-en="Explore project →"
+            data-tr="Projeyi incele →">Projeyi incele →</span>
+        </a>
+
+        <a class="project-card"
+          href="projects/ptls-preg.html">
+          <span class="project-number">03</span>
+
+          <h3>PTLS-PREG</h3>
+
+          <p
+            data-en="An early-stage concept exploring future possibilities in pregnancy imaging and computational visualization."
+            data-tr="Gebelik görüntüleme ve bilgisayar destekli görselleştirmenin gelecekteki olasılıklarını araştıran erken aşamalı bir konsept.">
+            Gebelik görüntüleme ve bilgisayar destekli görselleştirmenin gelecekteki olasılıklarını araştıran erken aşamalı bir konsept.
+          </p>
+
+          <span class="status"
+            data-en="Concept stage"
+            data-tr="Konsept aşaması">Konsept aşaması</span>
+
+          <span class="project-link"
+            data-en="Explore project →"
+            data-tr="Projeyi incele →">Projeyi incele →</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="research">
+      <div class="section-heading">
+        <h2 data-en="Our Approach" data-tr="Yaklaşımımız">
+          Yaklaşımımız
+        </h2>
+
+        <p class="section-description"
+          data-en="Curiosity guided by responsibility."
+          data-tr="Sorumlulukla yönlendirilen merak.">
+          Sorumlulukla yönlendirilen merak.
+        </p>
+      </div>
+
+      <div class="values-grid">
+        <article class="value-card">
+          <h3 data-en="Engineering Mindset"
+              data-tr="Mühendislik Bakış Açısı">
+            Mühendislik Bakış Açısı
+          </h3>
+
+          <p
+            data-en="Exploring technical ideas through structured thinking, design and research."
+            data-tr="Teknik fikirleri sistemli düşünme, tasarım ve araştırma yoluyla incelemek.">
+            Teknik fikirleri sistemli düşünme, tasarım ve araştırma yoluyla incelemek.
+          </p>
+        </article>
+
+        <article class="value-card">
+          <h3 data-en="Scientific Responsibility"
+              data-tr="Bilimsel Sorumluluk">
+            Bilimsel Sorumluluk
+          </h3>
+
+          <p
+            data-en="Clearly distinguishing early concepts from tested prototypes and established medical evidence."
+            data-tr="Erken aşamadaki konseptleri test edilmiş prototiplerden ve yerleşik tıbbi kanıtlardan açıkça ayırmak.">
+            Erken aşamadaki konseptleri test edilmiş prototiplerden ve yerleşik tıbbi kanıtlardan açıkça ayırmak.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <h2 data-en="Important Notice" data-tr="Önemli Bilgilendirme">
+          Önemli Bilgilendirme
+        </h2>
+      </div>
+
+      <div class="disclaimer"
+        data-en="The projects presented on this website are exploratory concepts. They are not represented as clinically validated devices, proven treatments, or approved diagnostic systems. Nothing on this website replaces professional medical advice or established healthcare services."
+        data-tr="Bu internet sitesinde sunulan projeler araştırma konseptleridir. Klinik olarak doğrulanmış cihazlar, kanıtlanmış tedaviler veya onaylı tanı sistemleri olarak sunulmamaktadır. Bu sitedeki hiçbir içerik profesyonel tıbbi danışmanlığın veya mevcut sağlık hizmetlerinin yerini almaz.">
+        Bu internet sitesinde sunulan projeler araştırma konseptleridir. Klinik olarak doğrulanmış cihazlar, kanıtlanmış tedaviler veya onaylı tanı sistemleri olarak sunulmamaktadır. Bu sitedeki hiçbir içerik profesyonel tıbbi danışmanlığın veya mevcut sağlık hizmetlerinin yerini almaz.
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-card">
+        <h2 data-en="Get in Touch" data-tr="İletişim">
+          İletişim
+        </h2>
+
+        <p
+          data-en="For general questions and project-related correspondence, contact P.A.T.L.A.S. Research by email."
+          data-tr="Genel sorular ve projelerle ilgili iletişim için P.A.T.L.A.S. Research'e e-posta gönderebilirsiniz.">
+          Genel sorular ve projelerle ilgili iletişim için P.A.T.L.A.S. Research'e e-posta gönderebilirsiniz.
         </p>
 
-        <div class="actions">
-          <a class="btn btn-primary" href="#projects"
-             data-en="Explore Projects →" data-tr="Projeleri Keşfet →">
-            Explore Projects →
-          </a>
-          <a class="btn" href="#about"
-             data-en="Discover P.A.T.L.A.S." data-tr="P.A.T.L.A.S.'ı Tanı">
-            Discover P.A.T.L.A.S.
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
-      <div class="container about-grid">
-        <div class="section-head">
-          <span class="eyebrow" data-en="Who We Are" data-tr="Biz Kimiz">
-            Who We Are
-          </span>
-          <h2 data-en="Curiosity. Research. Possibility."
-              data-tr="Merak. Araştırma. Olasılık.">
-            Curiosity. Research. Possibility.
-          </h2>
-        </div>
-
-        <div>
-          <p data-en="P.A.T.L.A.S. Research is an independent initiative focused on presenting biomedical technology ideas, exploring scientific questions and communicating project concepts clearly."
-             data-tr="P.A.T.L.A.S. Research; biyomedikal teknoloji fikirlerini tanıtmaya, bilimsel soruları araştırmaya ve proje konseptlerini anlaşılır biçimde paylaşmaya odaklanan bağımsız bir girişimdir.">
-            P.A.T.L.A.S. Research is an independent initiative focused on
-            presenting biomedical technology ideas, exploring scientific
-            questions and communicating project concepts clearly.
-          </p>
-          <p data-en="Our goal is to encourage thoughtful exploration while distinguishing established science from early-stage ideas."
-             data-tr="Amacımız, yerleşik bilimsel bilgilerle erken aşamadaki fikirleri birbirinden ayırarak bilinçli araştırmayı teşvik etmektir.">
-            Our goal is to encourage thoughtful exploration while
-            distinguishing established science from early-stage ideas.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="projects">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow" data-en="Project Portfolio" data-tr="Proje Portföyü">
-            Project Portfolio
-          </span>
-          <h2 data-en="Ideas worth exploring."
-              data-tr="Keşfedilmeye değer fikirler.">
-            Ideas worth exploring.
-          </h2>
-          <p data-en="An overview of our conceptual technology projects."
-             data-tr="Konsept teknoloji projelerimize genel bakış.">
-            An overview of our conceptual technology projects.
-          </p>
-        </div>
-
-        <div class="grid">
-          <article class="card">
-            <div class="card-icon">◉</div>
-            <span class="tag">PROJECT 01</span>
-            <h3>PATLAS-THERMA</h3>
-            <p data-en="A conceptual exploration of controlled thermal energy and its potential relationship to oncology research."
-               data-tr="Kontrollü termal enerji ile onkoloji araştırmaları arasındaki olası ilişkiyi inceleyen bir konsept.">
-              A conceptual exploration of controlled thermal energy and its
-              potential relationship to oncology research.
-            </p>
-            <span class="tag" data-en="Early-stage concept" data-tr="Erken aşama konsept">
-              Early-stage concept
-            </span>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">⌁</div>
-            <span class="tag">PROJECT 02</span>
-            <h3>PTLS-CRD</h3>
-            <p data-en="An exploratory medical imaging concept involving computer-based visualization, radio-related technology and Doppler principles."
-               data-tr="Bilgisayar tabanlı görselleştirme, radyo ile ilişkili teknoloji ve Doppler ilkelerini ele alan deneysel bir görüntüleme fikri.">
-              An exploratory medical imaging concept involving computer-based
-              visualization, radio-related technology and Doppler principles.
-            </p>
-            <span class="tag" data-en="Concept under exploration" data-tr="İncelenen konsept">
-              Concept under exploration
-            </span>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">✧</div>
-            <span class="tag">PROJECT 03</span>
-            <h3>PTLS-PREG</h3>
-            <p data-en="A conceptual investigation into alternative approaches to pregnancy imaging, with safety and feasibility as key questions."
-               data-tr="Güvenlik ve uygulanabilirliği temel sorular olarak ele alan alternatif gebelik görüntüleme yaklaşımlarına yönelik bir konsept.">
-              A conceptual investigation into alternative approaches to
-              pregnancy imaging, with safety and feasibility as key questions.
-            </p>
-            <span class="tag" data-en="Early-stage concept" data-tr="Erken aşama konsept">
-              Early-stage concept
-            </span>
-          </article>
-        </div>
-
-        <div class="notice">
-          <strong data-en="Scientific transparency"
-                  data-tr="Bilimsel şeffaflık">Scientific transparency</strong>
-          <span data-en=" — These projects are conceptual research ideas. They are not presented as clinically validated medical devices or proven treatments."
-                data-tr=" — Bu projeler konsept araştırma fikirleridir. Klinik olarak doğrulanmış tıbbi cihazlar veya kanıtlanmış tedaviler olarak sunulmamaktadır.">
-            — These projects are conceptual research ideas. They are not
-            presented as clinically validated medical devices or proven treatments.
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="research">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow" data-en="Research & Development"
-                data-tr="Araştırma ve Geliştirme">
-            Research & Development
-          </span>
-          <h2 data-en="Ideas need evidence."
-              data-tr="Fikirler kanıta ihtiyaç duyar.">
-            Ideas need evidence.
-          </h2>
-          <p data-en="We value scientific literature, transparent limitations and responsible communication."
-             data-tr="Bilimsel literatüre, sınırların şeffaf biçimde belirtilmesine ve sorumlu iletişime önem veriyoruz.">
-            We value scientific literature, transparent limitations
-            and responsible communication.
-          </p>
-        </div>
-
-        <div class="grid">
-          <article class="card">
-            <div class="card-icon">⌕</div>
-            <h3 data-en="Literature" data-tr="Literatür">Literature</h3>
-            <p data-en="Understanding existing research before proposing new ideas."
-               data-tr="Yeni fikirler önermeden önce mevcut araştırmaları anlamak.">
-              Understanding existing research before proposing new ideas.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">◇</div>
-            <h3 data-en="Concept Design" data-tr="Konsept Tasarımı">Concept Design</h3>
-            <p data-en="Documenting objectives, assumptions, challenges and open questions."
-               data-tr="Hedefleri, varsayımları, zorlukları ve açık soruları belgelemek.">
-              Documenting objectives, assumptions, challenges and open questions.
-            </p>
-          </article>
-
-          <article class="card">
-            <div class="card-icon">✓</div>
-            <h3 data-en="Responsible Innovation" data-tr="Sorumlu İnovasyon">
-              Responsible Innovation
-            </h3>
-            <p data-en="Prioritizing safety, evidence and realistic claims."
-               data-tr="Güvenliği, kanıtları ve gerçekçi iddiaları önceliklendirmek.">
-              Prioritizing safety, evidence and realistic claims.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="contact">
-      <div class="container">
-        <div class="section-head">
-          <span class="eyebrow" data-en="Get in Touch" data-tr="İletişime Geçin">
-            Get in Touch
-          </span>
-          <h2 data-en="We welcome your feedback."
-              data-tr="Görüşlerinizi bekliyoruz.">
-            We welcome your feedback.
-          </h2>
-          <p data-en="Questions, suggestions and feedback about our projects are welcome."
-             data-tr="Projelerimiz hakkındaki sorularınızı, önerilerinizi ve geri bildirimlerinizi bekliyoruz.">
-            Questions, suggestions and feedback about our projects are welcome.
-          </p>
-        </div>
-
-        <div class="contact-card">
-          <span class="tag">EMAIL</span>
-          <h3 data-en="P.A.T.L.A.S. Research"
-              data-tr="P.A.T.L.A.S. Research">
-            P.A.T.L.A.S. Research
-          </h3>
-          <a class="email" href="mailto:patlas.contact@proton.me">
-            patlas.contact@proton.me
-          </a>
-          <div>
-            <a class="btn btn-primary" href="mailto:patlas.contact@proton.me"
-               data-en="Send an Email →" data-tr="E-posta Gönder →">
-              Send an Email →
-            </a>
-          </div>
-          <p style="color: var(--muted); font-size: 12px;"
-             data-en="WhatsApp feedback contact will be added after its public use is confirmed."
-             data-tr="WhatsApp geri bildirim hattı, herkese açık kullanımına karar verildikten sonra eklenecektir.">
-            WhatsApp feedback contact will be added after its public use is confirmed.
-          </p>
-        </div>
+        <a href="mailto:patlas.contact@proton.me">
+          patlas.contact@proton.me ↗
+        </a>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> P.A.T.L.A.S. Research</span>
-      <span data-en="Biomedical Research & Medical Technology"
-            data-tr="Biyomedikal Araştırma ve Tıp Teknolojileri">
-        Biomedical Research & Medical Technology
-      </span>
-    </div>
+    <p><strong>P.A.T.L.A.S. Research</strong></p>
+    <p
+      data-en="Biomedical Research & Medical Technology"
+      data-tr="Biyomedikal Araştırma ve Tıbbi Teknoloji">
+      Biyomedikal Araştırma ve Tıbbi Teknoloji
+    </p>
+    <p>Engineering Tomorrow’s Healthcare.</p>
+    <p>© 2026 P.A.T.L.A.S. Research</p>
   </footer>
 
   <script>
-    let language = "en";
+    const langBtn = document.getElementById("langBtn");
+    let currentLang = "tr";
 
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
-
-    document.getElementById("langBtn").addEventListener("click", () => {
-      language = language === "en" ? "tr" : "en";
-      document.documentElement.lang = language;
+    langBtn.addEventListener("click", () => {
+      currentLang = currentLang === "tr" ? "en" : "tr";
+      document.documentElement.lang = currentLang;
 
       document.querySelectorAll("[data-en][data-tr]").forEach(element => {
-        element.textContent = element.dataset[language];
+        element.textContent = element.dataset[currentLang];
       });
 
-      document.getElementById("langBtn").textContent =
-        language === "en" ? "TR" : "EN";
+      langBtn.textContent = currentLang === "tr" ? "English" : "Türkçe";
     });
   </script>
 </body>
