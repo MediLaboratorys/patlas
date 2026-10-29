@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f5f7">
+  <meta name="description" content="PTLS-PREG — an exploratory pregnancy imaging research concept by P.A.T.L.A.S. Research.">
+  <title>PTLS-PREG | P.A.T.L.A.S. Research</title>
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card: #ffffff;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --blue: #0071e3;
+      --line: #e5e5ea;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,.85);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: auto;
+      padding: 15px 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .brand { font-weight: 700; color: var(--text); }
+    .nav-actions { display: flex; gap: 18px; align-items: center; }
+    .lang {
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 20px;
+      padding: 7px 13px;
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 64px 22px 80px;
+    }
+
+    .eyebrow {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(44px, 8vw, 76px);
+      line-height: 1.05;
+      letter-spacing: -.055em;
+      margin: 12px 0 18px;
+    }
+
+    .subtitle {
+      max-width: 680px;
+      color: var(--muted);
+      font-size: clamp(18px, 3vw, 23px);
+    }
+
+    .visual {
+      margin: 38px 0;
+      padding: 30px;
+      min-height: 220px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, #e8f2ff, #f8fbff);
+      border: 1px solid #dce9fb;
+      border-radius: 28px;
+      overflow: hidden;
+    }
+
+    .visual svg { width: 100%; max-width: 560px; height: auto; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 25px;
+    }
+
+    .card h3 { margin: 0 0 9px; font-size: 19px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    section { margin-top: 48px; }
+    h2 { font-size: 30px; letter-spacing: -.03em; margin-bottom: 12px; }
+    .notice {
+      border-left: 4px solid var(--blue);
+      background: white;
+      padding: 20px 22px;
+      border-radius: 0 16px 16px 0;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 25px 22px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 620px) {
+      .grid { grid-template-columns: 1fr; }
+      main { padding-top: 44px; }
+      .nav-actions { gap: 10px; }
+      .visual { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="brand" href="../index.html">P.A.T.L.A.S. Research</a>
+      <div class="nav-actions">
+        <a href="../index.html" data-en="Home" data-tr="Ana Sayfa">Home</a>
+        <button class="lang" id="langBtn" type="button">Türkçe</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="eyebrow"
+      data-en="Exploratory Research Concept"
+      data-tr="Keşif Amaçlı Araştırma Konsepti">
+      Exploratory Research Concept
+    </div>
+
+    <h1>PTLS-PREG</h1>
+
+    <p class="subtitle"
+      data-en="Exploring future possibilities in pregnancy imaging through biomedical engineering and computational visualization."
+      data-tr="Biyomedikal mühendislik ve bilgisayar destekli görselleştirme aracılığıyla gebelik görüntülemesinin gelecekteki olasılıklarını araştırmak.">
+      Exploring future possibilities in pregnancy imaging through biomedical engineering and computational visualization.
+    </p>
+
+    <div class="visual" aria-label="Illustrative abstract medical visualization">
+      <svg viewBox="0 0 600 250" role="img"
+        aria-label="Abstract illustration of a medical imaging field">
+        <defs>
+          <linearGradient id="wave" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0%" stop-color="#0071e3" stop-opacity=".12"/>
+            <stop offset="100%" stop-color="#42a5ff" stop-opacity=".7"/>
+          </linearGradient>
+        </defs>
+        <circle cx="300" cy="125" r="95" fill="url(#wave)"/>
+        <circle cx="300" cy="125" r="72" fill="none" stroke="#0071e3" stroke-opacity=".55" stroke-width="2"/>
+        <circle cx="300" cy="125" r="48" fill="none" stroke="#0071e3" stroke-opacity=".65" stroke-width="2"/>
+        <path d="M275 88 C240 100 255 148 284 162 C303 174 327 153 324 132 C322 116 307 111 300 124 C291 141 279 139 277 124 C275 110 295 105 305 94"
+          fill="none" stroke="#0066cc" stroke-width="4" stroke-linecap="round"/>
+        <path d="M100 125 H210 M390 125 H500" stroke="#0071e3" stroke-opacity=".5" stroke-width="2" stroke-dasharray="5 7"/>
+        <circle cx="100" cy="125" r="5" fill="#0071e3"/>
+        <circle cx="500" cy="125" r="5" fill="#0071e3"/>
+      </svg>
+    </div>
+
+    <section>
+      <h2 data-en="Overview" data-tr="Genel Bakış">Overview</h2>
+      <p data-en="PTLS-PREG is an early-stage concept exploring how computational systems and biomedical engineering might support the visualization and interpretation of pregnancy-related imaging. It is a research idea, not a functioning medical device."
+         data-tr="PTLS-PREG, bilgisayar sistemleri ve biyomedikal mühendisliğin gebelikle ilgili görüntülerin görselleştirilmesini ve yorumlanmasını gelecekte nasıl destekleyebileceğini araştıran erken aşamalı bir konsepttir. Çalışır durumdaki bir tıbbi cihaz değildir.">
+        PTLS-PREG is an early-stage concept exploring how computational systems and biomedical engineering might support the visualization and interpretation of pregnancy-related imaging. It is a research idea, not a functioning medical device.
+      </p>
+    </section>
+
+    <section>
+      <h2 data-en="Research Directions" data-tr="Araştırma Alanları">Research Directions</h2>
+      <div class="grid">
+        <article class="card">
+          <h3 data-en="Image Visualization" data-tr="Görüntü Görselleştirme">Image Visualization</h3>
+          <p data-en="Exploring ways to present medical imaging data in clear, structured visual formats."
+             data-tr="Tıbbi görüntüleme verilerini açık ve düzenli görsel biçimlerde sunma yöntemlerini araştırmak.">
+            Exploring ways to present medical imaging data in clear, structured visual formats.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 data-en="Computational Analysis" data-tr="Bilgisayar Destekli Analiz">Computational Analysis</h3>
+          <p data-en="Studying how software tools could organize imaging information for qualified clinical review."
+             data-tr="Yazılım araçlarının görüntüleme bilgilerini uzman klinik değerlendirmesi için nasıl düzenleyebileceğini incelemek.">
+            Studying how software tools could organize imaging information for qualified clinical review.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 data-en="Safety First" data-tr="Önce Güvenlik">Safety First</h3>
+          <p data-en="Any future approach would require rigorous safety testing and independent scientific evaluation."
+             data-tr="Gelecekteki her yaklaşımın kapsamlı güvenlik testlerinden ve bağımsız bilimsel değerlendirmeden geçmesi gerekir.">
+            Any future approach would require rigorous safety testing and independent scientific evaluation.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3 data-en="Current Status" data-tr="Mevcut Durum">Current Status</h3>
+          <p data-en="Conceptual research only. No validated prototype, clinical evidence, or demonstrated diagnostic capability."
+             data-tr="Yalnızca kavramsal araştırma aşamasındadır. Doğrulanmış prototipi, klinik kanıtı veya gösterilmiş tanı yeteneği yoktur.">
+            Conceptual research only. No validated prototype, clinical evidence, or demonstrated diagnostic capability.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2 data-en="Scientific Responsibility" data-tr="Bilimsel Sorumluluk">Scientific Responsibility</h2>
+      <div class="notice"
+        data-en="PTLS-PREG is a conceptual project and has not been established as a safe, effective, radiation-free, or clinically validated imaging method. It does not replace ultrasound, MRI, or professional medical advice. Pregnancy imaging decisions must be made with qualified healthcare professionals."
+        data-tr="PTLS-PREG kavramsal bir projedir; güvenli, etkili, radyasyonsuz veya klinik olarak doğrulanmış bir görüntüleme yöntemi olduğu gösterilmemiştir. Ultrasonun, MR'ın veya profesyonel tıbbi danışmanlığın yerini almaz. Gebelikte görüntüleme kararları yetkili sağlık profesyonelleriyle verilmelidir.">
+        PTLS-PREG is a conceptual project and has not been established as a safe, effective, radiation-free, or clinically validated imaging method. It does not replace ultrasound, MRI, or professional medical advice. Pregnancy imaging decisions must be made with qualified healthcare professionals.
+      </div>
+    </section>
+
+    <section>
+      <a href="../index.html"
+        data-en="← Back to P.A.T.L.A.S. Research"
+        data-tr="← P.A.T.L.A.S. Research ana sayfasına dön">
+        ← Back to P.A.T.L.A.S. Research
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 P.A.T.L.A.S. Research ·
+    <span data-en="Biomedical Research & Medical Technology"
+          data-tr="Biyomedikal Araştırma ve Tıbbi Teknoloji">
+      Biomedical Research & Medical Technology
+    </span>
+  </footer>
+
+  <script>
+    const langBtn = document.getElementById("langBtn");
+    let currentLang = "en";
+
+    langBtn.addEventListener("click", () => {
+      currentLang = currentLang === "en" ? "tr" : "en";
+      document.documentElement.lang = currentLang;
+
+      document.querySelectorAll("[data-en][data-tr]").forEach(element => {
+        element.textContent = element.dataset[currentLang];
+      });
+
+      langBtn.textContent = currentLang === "en" ? "Türkçe" : "English";
+    });
+  </script>
+</body>
+</html>
